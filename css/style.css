@@ -10,15 +10,17 @@ body {
     flex-direction: column;
     background-color: black;
     border-radius: 12px;
-    padding: 24px;
-    gap: 16px;
+    padding: 32px;
+    gap: 28px;
 }
 
 .entry {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: grey;
+    background-color: #dfdec9;
+    height: 90px;
+    border-radius: 12px;
     padding: 12px;
 }
 
@@ -27,5 +29,39 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 14px;
+}
+
+.btn.cmd {
+    background-color: #dfdec9;
+}
+
+.btn.num {
+    background-color: #77e7f3;
+}
+
+.btn.symbol {
+    background-color: #ff5a32;
+}
+
+.row {
+    display: flex;
+    gap: 14px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn.equals {
+    background-color: #ff8700;
+}
+
+.btn {
+    border: none;
+    border-radius: 3px;
+    height: 80px;
+    width: 80px;
+    font-size: 24px;
+    font-weight: 900;
+    flex: 1;
 }

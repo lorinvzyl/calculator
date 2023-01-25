@@ -34,7 +34,7 @@ body {
     gap: 14px;
 }
 
-.btn.cmd {
+.btn.cmd, .btn.dec {
     background-color: #dfdec9;
 }
 
@@ -66,4 +66,5 @@ body {
     font-size: 24px;
     font-weight: 900;
     flex: 1;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
 }

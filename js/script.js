@@ -1,14 +1,16 @@
 let numButtons = document.querySelectorAll(".btn.num");
 let symButtons = document.querySelectorAll(".btn.symbol");
 let decimal = document.querySelector(".btn.dec");
-let clear = document.querySelector(".btn.cmd");
+let reset = document.querySelector(".btn.cmd#reset");
+let del = document.querySelector(".btn.cmd#delete");
 let equals = document.querySelector(".btn.equals");
 let display = document.querySelector(".entry");
 
 numButtons.forEach(button => button.addEventListener('click', storeVal));
 symButtons.forEach(button => button.addEventListener('click', operatorClicked));
 decimal.addEventListener('click', storeVal, {once: true});
-clear.addEventListener('click', clearValues);
+reset.addEventListener('click', clearValues);
+del.addEventListener('click', clearSingleValue);
 equals.addEventListener('click', calculate);
 
 function add(num1, num2)
@@ -59,6 +61,14 @@ function clearValues()
 {
     display.textContent = "";
     decimal.addEventListener('click', storeVal, {once: true});
+}
+
+function clearSingleValue()
+{
+    console.log(display.textContent.slice(-1));
+    if(display.textContent.slice(-1) === ".")
+        decimal.addEventListener('click', storeVal, {once: true});
+    display.textContent = display.textContent.slice(0, -1);
 }
 
 function storeVal(e)
